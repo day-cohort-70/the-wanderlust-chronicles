@@ -1,0 +1,20 @@
+#adventures {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+.card {
+    border: 3px dotted fuchsia;
+    background-color: goldenrod;
+    color:greenyellow;
+    flex-basis: 20%;
+    margin: 0 0 1.2rem 0;
+    padding: 0.4rem;
+}
+
+.travel__photo {
+    max-width: 5rem;
+    margin: 0 1rem;
+}
