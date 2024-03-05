@@ -8,7 +8,7 @@ import { TravelCardHeader } from "./TravelHeader.js"
 
 export const TravelCard = (entireEntryObject) => {
     const headerHTML = TravelCardHeader(entireEntryObject.location)
-    const bodyHTML = TravelCardBody(entireEntryObject.description, entireEntryObject.weather, entireEntryObject.id)
+    const bodyHTML = TravelCardBody(entireEntryObject.location, entireEntryObject.description, entireEntryObject.weather, entireEntryObject.id)
     const footerHTML = TravelCardFooter(entireEntryObject.date)
 
     const entireCardHTML = `

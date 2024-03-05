@@ -1,22 +1,11 @@
-import { travelPhotos } from "../data.js"
-
 /*
     This component will display the related photos for the destination
     and then the .description, and then the .weather
 */
-export const TravelCardBody = (descriptionString, weatherString, travelId) => {
-
-    let thisEntrysPhotos = ""
-
-    for (const photoObject of travelPhotos) {
-        if (travelId === photoObject.entryId) {
-            thisEntrysPhotos += `<img class="travel__photo" src="./images/${photoObject.filename}" alt="My fun photo of destination" />`
-        }
-    }
-
+export const TravelCardBody = (location, descriptionString, weatherString, travelId) => {
     return `
         <div class="card__body">
-            ${thisEntrysPhotos}
+            <button data-destination="${location}" data-type="travelButton" id="${travelId}">Show Photos</button>
             <div>${descriptionString}</div>
             <div>${weatherString}</div>
         </div>
